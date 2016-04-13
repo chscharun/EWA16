@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">	
+	<head>
+		<meta charset="UTF-8" />
+		<title>CgiTestformular</title>
+	</head>
+	<body>
+		<h1>CgiTestFormular</h1>
+		<p>Dieses Formular sendet an 
+		   <a href="http://localhost/ewa-cgi/CgiTest.exe"> http://localhost/ewa-cgi/CgiTest.exe
+		   </a>
+		</p>
+		<form action="http://localhost/ewa-cgi/CgiTest.exe" method="get">
+		   <p>Name:<br/><input maxlength="40" size="40" name="Anwendername"/></p>
+		   <p>Text:<br/><textarea name="KommentarText" rows="2" cols="40"></textarea></p>
+		   <p><input type="submit" value="absenden"/> mit GET</p>
+		</form>
+		<form action="http://localhost/ewa-cgi/CgiTest.exe" method="post">
+		   <p>Name:<br/><input maxlength="40" size="40" name="Anwendername"/></p>
+		   <p>Text:<br/><textarea name="KommentarText" rows="2" cols="40"></textarea></p>
+		   <p><input type="submit" value="absenden"/> mit POST</p>
+		</form>
+	</body>
+</html>

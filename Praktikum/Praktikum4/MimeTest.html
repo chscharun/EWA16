@@ -1,0 +1,33 @@
+<?php header ("Content-type: text/html"); ?>
+<!DOCTYPE html>
+<html lang="de">	
+<head>
+    <meta charset="UTF-8" />
+	<title>MimeTest</title>
+</head>
+<body>
+	<h1>MimeTest</h1>
+	<p>
+	   Konfigurieren Sie Apache so, dass Dateien vom Typ .ewa mit Excel geöffnet werden.
+	   Testen Sie mit untenstehendem Link die korrekte Eintragung 
+	   des MIME-Typs im Webserver.
+	</p>
+	<p>
+	   Achtung! Rufen Sie diese Datei unbedingt über den Webserver auf (also localhost...).
+	   Wenn Sie die Datei per Doppelklick öffnen, wird auch der Link über das Filesystem geöffnet
+	   und nicht über Apache mit Mime-Types!
+	</p>
+	<p>
+	   Tragen Sie den MIME-Type "application/vnd.ms-excel ewa" so ein, dass
+	   <a href="MimeTest.ewa">MimeTest.ewa mit Excel geöffnet wird</a>.
+       Falls Firefox die Datei direkt anzeigt, stimmt der MIME-Type nicht.
+	   Apache sendet für ihm unbekannte Dateitypen nämlich "text/plain"
+	</p>
+	<p>	   
+	   Sie müssen nach Änderungen den Cache des Browsers löschen und Apache neu starten!
+	</p>
+	<p>
+	   Prüfen Sie anschließend, was passiert, wenn Sie eine bekannte Dateiendung wie pdf mit dem Mime-Type umdefinieren.
+	</p>
+</body>
+</html>
