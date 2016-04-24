@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Formulare Cheat Sheet</title>
+		<style type="text/css">
+			pre{
+				background-color: lightblue;		
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Formulare Cheat-Sheet</h1>
+		<h2>HTML &lt;form&gt; Element</h2>
+<pre>&lt;form&gt;
+	...
+	Formular-Elemente
+	...
+&lt;/form&gt;</pre>
+		<h2>Form-Attribute</h2>
+		<h3>Action</h3>
+<pre>&lt;form action="target.php"&gt;
+	...
+	Formular-Elemente
+	...
+&lt;/form&gt;</pre>		
+		<h3>Method</h3>
+<pre>&lt;form action="target.php" method="get"&gt;
+	...
+	Formular-Elemente
+	...
+&lt;/form&gt;</pre>
+		<span>ODER:</span>
+<pre>&lt;form action="target.php" method="post"&gt;
+	...
+	Formular-Elemente
+	...
+&lt;/form&gt;</pre>
+		<h2>Input-Felder</h2>
+		<h3>Text-Input</h3>
+<pre>&lt;form&gt;
+	&lt;label for="firstname"&gt;Vorname:&lt;/label&gt;
+	&lt;input id="firstname" name="firstname" type="text" /&gt;
+	
+	&lt;label for="lastname"&gt;Nachname:&lt;/label&gt;
+	&lt;input id="lastname" name="lastname" type="text" /&gt;
+	
+	&lt;label for="password"&gt;Password:&lt;/label&gt;
+	&lt;input id="password" name="password" type="text" /&gt;
+&lt;/form&gt;</pre>
+		<div>
+			<span>Aussehen im Browser:</span><br/><br/>
+			<form>
+				<label for="firstname">Vorname:</label><br/>
+				<input id="firstname" name="firstname" type="text" /><br/>
+	
+				<label for="lastname">Nachname:</label><br/>
+				<input id="lastname" name="lastname" type="text" /><br/>
+				
+				<label for="password">Passwort:</label><br/>
+				<input id="password" name="password" type="password" />
+			</form>
+		</div>
+		<h3>Text-Area-Input</h3>
+<pre>&lt;form&gt;
+	&lt;label for="comment"&gt;Kommentar:&lt;/label&gt;
+	&lt;textarea id="comment" name="comment"&gt;&lt;/textarea&gt;
+&lt;/form&gt;</pre>
+		<div>
+			<span>Aussehen im Browser:</span><br/><br/>
+			<form>
+				<label for="comment">Kommentar:</label><br/>
+				<textarea id="comment" name="comment"></textarea>
+			</form>
+		</div>
+		<h3>Checkbox-Input</h3>
+<pre>&lt;form&gt;
+	&lt;input id="lecturer1" name="lecturer1" type="checkbox" /&gt;
+	&lt;label for="lecturer1"&gt;Thomas Sauer&lt;/label&gt;
+	
+	&lt;input id="lecturer2" name="lecturer2" type="checkbox" /&gt;
+	&lt;label for="lecturer2"&gt;David Müller&lt;/label&gt;
+	
+	&lt;input id="lecturer3" name="lecturer3" type="checkbox" /&gt;
+	&lt;label for="lecturer3"&gt;Christopher Dörge&lt;/label&gt;
+&lt;/form&gt;</pre>
+		<div>
+			<span>Aussehen im Browser:</span><br/><br/>
+			<form>
+				<input id="lecturer1" name="lecturer1" type="checkbox" />
+				<label for="lecturer1">Thomas Sauer</label><br/>
+	
+				<input id="lecturer2" name="lecturer2" type="checkbox" />
+				<label for="lecturer2">David Müller</label><br/>
+	
+				<input id="lecturer3" name="lecturer3" type="checkbox" />
+				<label for="lecturer3">Christopher Dörge</label>
+			</form>
+		</div>
+		<h3>Radio-Button-Input</h3>
+<pre>&lt;form&gt;
+	&lt;input id="lecturer1" name="lecturer" type="radio" /&gt;
+	&lt;label for="lecturer1"&gt;Thomas Sauer&lt;/label&gt;
+	
+	&lt;input id="lecturer2" name="lecturer" type="radio" /&gt;
+	&lt;label for="lecturer2"&gt;David Müller&lt;/label&gt;
+	
+	&lt;input id="lecturer3" name="lecturer" type="radio" /&gt;
+	&lt;label for="lecturer3"&gt;Christopher Dörge&lt;/label&gt;
+&lt;/form&gt;</pre>
+		<div>
+			<span>Aussehen im Browser:</span><br/><br/>
+			<form>
+				<input id="lecturer11" name="lecturer" type="radio" />
+				<label for="lecturer11">Thomas Sauer</label><br/>
+	
+				<input id="lecturer22" name="lecturer" type="radio" />
+				<label for="lecturer22">David Müller</label><br/>
+	
+				<input id="lecturer33" name="lecturer" type="radio" />
+				<label for="lecturer33">Christopher Dörge</label>
+			</form>
+		</div>
+		<h3>Select-Input</h3>
+<pre>&lt;form&gt;
+	&lt;label for="lecturer"&gt;Dozenten:&lt;/label&gt;
+	&lt;select id="lecturer" name="lecturer"&gt;
+		&lt;option&gt;Thomas Sauer&lt;/option&gt;
+		&lt;option&gt;David Müller&lt;/option&gt;
+		&lt;option&gt;Christopher Dörge&lt;/option&gt;
+	&lt;/select&gt;
+	
+	&lt;label for="lecturer"&gt;Dozenten (alternativ):&lt;/label&gt;
+	&lt;select id="lecturer" name="lecturer" multiple /&gt;
+		&lt;option&gt;Thomas Sauer&lt;/option&gt;
+		&lt;option&gt;David Müller&lt;/option/&gt;
+		&lt;option&gt;Christopher Dörge&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/form&gt;</pre>
+		<div>
+			<span>Aussehen im Browser:</span><br/><br/>
+			<form>
+				<label for="lecturer">Dozenten:</label><br/>
+				<select id="lecturer" name="lecturer">
+					<option>Thomas Sauer</option>
+					<option>David Müller</option>
+					<option>Christopher Dörge</option>
+				</select><br/><br/>
+				<label for="lecturer">Dozenten (alternativ):</label><br/>
+				<select id="lecturer" name="lecturer" multiple>
+					<option>Thomas Sauer</option>
+					<option selected>David Müller</option>
+					<option>Christopher Dörge</option>
+				</select>
+			</form>
+		</div>
+		<h3>Form-Control-Input</h3>
+<pre>&lt;form&gt;
+	&lt;label for="firstname">Vorname:&lt;/label&gt;
+	&lt;input id="firstname" name="firstname" type="text" /&gt;
+
+	&lt;label for="lastname">Nachname:&lt;/label&gt;
+	&lt;input id="lastname" name="lastname" type="text" /&gt;
+	
+	&lt;input type="submit" value="Absenden"/&gt;
+	&lt;input type="reset" value="Zurücksetzen"/&gt;
+&lt;/form&gt;</pre>
+		<div>
+			<span>Aussehen im Browser:</span><br/><br/>
+			<form>
+				<label for="firstname">Vorname:</label><br/>
+				<input id="firstname" name="firstname" type="text" /><br/>
+	
+				<label for="lastname">Nachname:</label><br/>
+				<input id="lastname" name="lastname" type="text" /><br/><br/>
+				
+				<input type="submit" value="Absenden"/>
+				<input type="reset" value="Zurücksetzen"/>
+			</form>
+		</div>
+		<h2>Fieldsets</h2>
+		<pre>&lt;form&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Persönliche Informationen&lt;/legend&gt;
+		&lt;label for="firstname">Vorname:&lt;/label&gt;
+		&lt;input id="firstname" name="firstname" type="text" /&gt;
+	
+		&lt;label for="lastname">Nachname:&lt;/label&gt;
+		&lt;input id="lastname" name="lastname" type="text" /&gt;
+	&lt;fieldset&gt;
+&lt;/form&gt;</pre>
+		<div>
+			<span>Aussehen im Browser:</span><br/><br/>
+			<form>
+				<fieldset>
+					<legend>Persönliche Informationen</legend>
+					<label for="firstname">Vorname:</label><br/>
+					<input id="firstname" name="firstname" type="text" /><br/>
+		
+					<label for="lastname">Nachname:</label><br/>
+					<input id="lastname" name="lastname" type="text" /><br/><br/>
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
