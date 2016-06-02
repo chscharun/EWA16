@@ -1,0 +1,11 @@
+# CHtaccessGenerator::GenHtaccess: W Ewa\Vorlesung\Links\PHP\Beispiel_OO
+order allow,deny
+allow from all
+<Files ~ "\.(bat|cpp|css|f90|h|java|js|php|pif|pl|sql|txt)$">
+  ForceType text/plain
+</Files>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.xxx
+</IfModule>
+
