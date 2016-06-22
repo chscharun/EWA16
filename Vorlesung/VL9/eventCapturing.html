@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Event Capturing</title>
+		<style type="text/css">
+			table{
+				padding: 10px;
+				cursor: pointer;
+			}
+			th, td{
+				border: 1px solid black;
+				padding: 2px;
+			}
+		</style>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded", function(){
+
+				// Binding click event to all cells
+				var tdArray = document.getElementsByTagName("td");
+
+				for(var i = 0; i < tdArray.length; i++){
+					tdArray[i].addEventListener("click", function(event){
+						alert("On table cell level");
+						this.style.backgroundColor = "#009";
+					}, true)
+				}
+
+				// Binding click event to all rows
+				var trArray = document.getElementsByTagName("tr");
+
+				for(var i = 0; i < trArray.length; i++){
+					trArray[i].addEventListener("click", function(event){
+						alert("On table row level");
+						this.style.backgroundColor = "#77A";
+					}, true)
+				}
+
+				// Binding click event to all tables
+				var tableArray = document.getElementsByTagName("table");
+
+				for(var i = 0; i < tableArray.length; i++){
+					tableArray[i].addEventListener("click", function(event){
+						alert("On table level");
+						this.style.backgroundColor = "#BBD";
+					}, true)
+				}
+
+				// Binding reset event
+				var reset = document.getElementById("reset");
+				reset.addEventListener("click", function(event){
+					var elementsArray = document.getElementsByClassName("resetable");
+
+					for(var i = 0; i < elementsArray.length; i++){
+						elementsArray[i].style.backgroundColor = "#FFF";
+					}
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Event capturing</h1>
+		<i>Demo: click any cell in the table and watch the click event capturing</i>
+		<table class="resetable">
+			<tr class="resetable">
+				<td class="resetable">Lorem</td>
+				<td class="resetable">ipsum</td>
+				<td class="resetable">dolor</td>
+			</tr>
+			<tr class="resetable">
+				<td class="resetable">sit amet, consetetur</td>
+				<td class="resetable">sadipscing elitr, sed</td>
+				<td class="resetable">diam nonumy eirmod</td>
+			</tr>
+			<tr class="resetable">
+				<td class="resetable">tempor invidunt ut</td>
+				<td class="resetable">labore et dolore</td>
+				<td class="resetable">magna aliquyam erat</td>
+			</tr>
+			<tr class="resetable">
+				<td class="resetable">sed diam voluptua</td>
+				<td class="resetable">At vero eos</td>
+				<td class="resetable">et accusam et</td>
+			</tr>
+		</table>
+		<button id="reset">Reset</button>
+	</body>
+</html>

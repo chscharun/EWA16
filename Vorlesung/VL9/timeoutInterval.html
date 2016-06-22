@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Events</title>
+		<script type="text/javascript">
+			var intervalId = window.setInterval(function(){
+				console.log("loop")
+			}, 5000);
+			
+			window.setTimeout(function(){
+				console.log("clearing loop");
+				clearInterval(intervalId);
+			}, 16000);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

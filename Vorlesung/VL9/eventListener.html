@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Event Listener</title>
+		<style type="text/css">
+		</style>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded", function(){
+				var button = document.getElementById("button");
+
+				button.onclick = function(){
+					alert("clicked attribute");
+				};
+				
+				button.addEventListener("click", function(){
+					alert("clicked event listener");
+				});
+			});
+		</script>
+	</head>
+	<body>
+			<button id="button">Button</button>
+	</body>
+</html>

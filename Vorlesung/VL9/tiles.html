@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Tiles</title>
+		<style type="text/css">
+			div.tile{
+				margin: 20px;
+				padding: 60px;
+				color: #FFF;
+				font-size: 20px;
+				font-weight: bold;
+				border: 5px solid #000;
+			}
+		</style>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded", function(){
+				var index = 1;
+				
+				button = document.getElementById("addButton");
+				button.addEventListener("mousedown", function(){
+					var tile = document.createElement("div");
+					tile.className = tile.className + " tile";
+					tile.style.backgroundColor = randomHex();
+					
+					var text = document.createTextNode(index.toString());
+					
+					tile.appendChild(text);
+					
+					var pane = document.getElementById("pane");
+					pane.appendChild(tile);
+					
+					index++;
+				})
+				
+				var randomHex = function(){
+					return '#' + Math.floor(Math.random()*16777215).toString(16);
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<button id="addButton">Add tile</button>
+		<section id="pane">
+			
+		</section>
+	</body>
+</html>

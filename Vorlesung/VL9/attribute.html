@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Attribute</title>
+		<style type="text/css">
+			div{
+				margin-bottom: 20px;
+			}
+			a{
+				font-size: 20px;
+				font-weight: bold;
+			}
+			select{
+				width: 200px;
+				font-size: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded", function(){
+				var link = document.getElementById("link");
+				var select = document.getElementById("subjectSelect");
+				
+				createHref = document.getElementById("createHref");
+				createHref.addEventListener("click", function(){
+					var href = document.createAttribute("href");
+					href.value = "http://fbi.h-da.de";
+					
+					link.setAttributeNode(href);
+				});
+				
+				
+				createTarget = document.getElementById("createTarget");
+				createTarget.addEventListener("click", function(){
+					link.setAttribute("target", "_blank");
+				});
+				
+				secondSelect = document.getElementById("selectSecond");
+				secondSelect.addEventListener("click", function(){
+					console.log(select.childNodes);
+					console.log(select.children);
+					select.children[1].setAttribute("selected", "selected");
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<button id="createHref">Create href</button>
+			<button id="createTarget">Set target blank</button>
+		</div>
+		<div>
+			<a id="link">Link zum Fachbereich</a>
+		</div>
+		<div>
+			<button id="selectSecond">Select second item</button>
+		</div>
+		<div>
+			<select id="subjectSelect">
+				<option>GDV</option>
+				<option>EWA</option>
+				<option>ENA</option>
+			</select>
+		</div>
+	</body>
+</html>

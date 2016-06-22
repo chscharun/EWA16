@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Events</title>
+		<style type="text/css">
+			div.pane{
+				margin: 20px;
+				height: 200px;
+				width: 200px;
+			}
+			div#clickPane{
+				background-color: green;
+			}
+			div#hoverPane{
+				background-color: cornflowerblue;
+			}
+		</style>
+		<script type="text/javascript">
+			function clickEvent(){
+				console.log("click");
+			}
+			
+			function mouseDownEvent(){
+				console.log("mouse down");
+			}
+			
+			function mouseUpEvent(){
+				console.log("mouse up");
+			}
+			
+			function mouseMoveEvent(){
+				console.log("mouse move");
+			}
+			
+			function mouseOverEvent(){
+				console.log("mouse over");
+			}
+			
+			function mouseOutEvent(){
+				console.log("mouse out");
+			}
+		</script>
+	</head>
+	<body>
+		<section>
+			<div id="clickPane" class="pane" onclick="clickEvent()" onmousedown="mouseDownEvent()" onmouseup="mouseUpEvent()"></div>
+			<div id="hoverPane" class="pane" onmousemove="mouseMoveEvent()" onmouseover="mouseOverEvent()" onmouseout="mouseOutEvent()"></div>
+		</section>
+	</body>
+</html>
