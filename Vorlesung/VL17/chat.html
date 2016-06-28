@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>h_da Chat</title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			header {
+				border:2px solid black;
+				padding:2em;
+				margin-bottom: 2em;
+			}
+			
+			aside, main {
+				padding: 2em;
+				border:2px solid red;
+				float: left;
+				width: 30%;
+			}
+			
+			nav a {
+				text-decoration: none;
+				color: red;
+			}
+			
+			main {
+				border-color: blue;
+				width: 50%;
+				margin-left: 2em;
+				float: right;
+				margin-bottom: 2em;
+			}
+			
+			input[type="text"] {
+				width: 80%;
+			}
+			
+			textarea {
+				display: block;
+				margin-top: 2em;
+				width: 100%;
+				height: 20em;
+			}
+			
+			footer {
+				border: 2px solid black;
+				padding: 2em;
+				margin-top: 2em;
+				clear: both;
+			}
+		</style>
+		<script>
+		
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>h_da Superchat</h1>
+		</header>
+		<aside>
+			<nav>
+				<ul>
+					<li><a href="index.html">Chat</a></li>
+					<li><a href="imp.html">Impressum</a></li>
+				</ul>
+			</nav>
+		</aside>
+		<main>
+			<form action="save.php" method="POST">
+				<input type="text" name="chatmessage" placeholder="Bitte geben Sie hier Ihre Chatnachricht ein ..." />
+				<input type="submit" value="Abschicken" />
+				
+				<textarea>Some Chat Content.</textarea>
+				
+			</form>
+		</main>
+		<footer>
+			<p>
+			&copy; 2016 h_da
+			</p>
+		</footer>
+	</body>
+</html>
